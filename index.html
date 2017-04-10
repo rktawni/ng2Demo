@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Genpact Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="../app/app.component.css" rel="stylesheet" />
+    <link rel="icon" 
+      type="image/png" 
+      href="app/assets/images/fevicon.ico" />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="../node_modules/es5-shim/es5-shim.min.js"></script>
+   <script src="../node_modules/core-js/client/core.min.js"></script>
+    
+    <script src="../node_modules/zone.js/dist/zone.js"></script>
+    <script src="../node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../systemjs.config.js"></script>
+
+    <!-- 2. Configure SystemJS--> 
+    <script>
+      System.import('app').catch(function(err){ console.error(err);  });
+    </script> 
+    
+</head>
+
+<body>
+<demo-app>Loading.....</demo-app>
+</body>
+
+</html>

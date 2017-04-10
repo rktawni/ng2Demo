@@ -1,0 +1,20 @@
+<div class="currencyTable">
+    <div class="tableHeader">
+        <div role='button' class="headerLeft btn-default" (click)='sortOnAccount()' [class.active]="accountSort">Account <i *ngIf='amtSortOrderAsc && accountSort' class="fa fa-sort-asc" aria-hidden="true"></i><i *ngIf='!amtSortOrderAsc && accountSort' class="fa fa-sort-desc" aria-hidden="true"></i></div>
+        <div role='button' class="headerRight btn-default"(click)='sortOnAmount()' [class.active]="!accountSort">
+            <div class='amtCash' >Available Cash </div>
+            <div class='amtCash'>                
+                    <i *ngIf='amtSortOrderAsc && !accountSort' class="fa fa-sort-asc" aria-hidden="true"></i><i *ngIf='!amtSortOrderAsc && !accountSort' class="fa fa-sort-desc" aria-hidden="true"></i>
+                Today's Changes</div>
+        </div>
+            
+    </div>
+    <div *ngFor="let currencyItem of data">
+        <div style="border-bottom:0.5px solid lightgray; padding:5px;">
+            <div class="amtAccount">{{currencyItem.account}}</div>
+            <div class='amtCash'>{{currencyItem.amount|currency:'USD':true}}</div>
+            <div class='amtCash currencyChange' [ngStyle]="{'color':getCurrencyColor(currencyItem.change)}">{{currencyItem.change}}/{{currencyItem.baseAmount|currency:'USD':true}}</div>
+        </div>
+    </div>
+    <div *ngIf='!fullListLoaded' class='loadMore' role='button' (click)='loadFullList()'>Load More</div>
+</div>

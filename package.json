@@ -1,0 +1,43 @@
+{
+  "name": "genpactDemo",
+  "version": "1.0.0",
+  "author": "Ravinder Kumar",
+  "description": "Assignment",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lint": "tslint ./app/**/*.ts -t verbose",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@angular/common": "2.1.0",
+    "@angular/compiler": "2.1.0",
+    "@angular/core": "2.1.0",
+    "@angular/forms": "2.1.0",
+    "@angular/http": "2.1.0",
+    "@angular/platform-browser": "2.1.0",
+    "@angular/platform-browser-dynamic": "2.1.0",
+    "@angular/router": "3.1.0",
+    "@angular/upgrade": "2.1.0",
+    "bootstrap": "^3.3.6",
+    "core-js": "^2.4.1",
+    "es5-shim": "^4.5.9",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "5.0.0-rc.1",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.0",
+    "tslint": "^3.7.4",
+    "typescript": "^2.0.3",
+    "typings": "1.4.0"
+  },
+  "repository": {}
+}
