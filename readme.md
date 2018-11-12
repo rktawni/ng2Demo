@@ -1,4 +1,4 @@
-1) Open a command prompt in the project's root directory (APM - Start).
+1) Open a command prompt in the project's root directory (NPM - Start).
     
 2) Type: `npm start`
     This launches the TypeScript compiler (tsc) to compile the application and wait for changes. 
